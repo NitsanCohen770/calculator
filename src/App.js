@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import Calculator from './containers/Calculator';
+import ThemeRow from './containers/ThemeRow';
+import Input from './components/Input';
+import { CalculatorWrapper } from './styles';
 import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <CalculatorWrapper>
+      <div>
+        <div
+          style={{
+            display: 'inline-flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            width: '28%',
+            marginLeft: 'auto',
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <span>1 </span>
+          <span> 2 </span>
+          <span>3</span>
+        </div>
+        <ThemeRow />
+        <Input value="123" />
+        <Calculator />
+      </div>
+    </CalculatorWrapper>
   );
 }
 
