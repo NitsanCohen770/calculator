@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CalculatorRowWrapper } from './styles';
 import Button from '../../components/Button';
+import CalcContext from '../../context/calc-context';
+import { useContext } from 'react';
+
 const keysValue = [
   [
     7,
@@ -33,17 +36,30 @@ const keysValue = [
   ],
 ];
 const KeysLayout = () => {
+  const calcCTX = useContext(CalcContext);
+  const calculateHandler = value => {
+    if (isNaN(value)) {
+      switch (value) {
+        case '+':
+          return calcCTX.increment(calcCTX.value);
+
+        default:
+          return calcCTX.increment(calcCTX.value);
+      }
+    }
+    calcCTX.number(value);
+  };
   return keysValue.map(keyRow => {
     return (
       <CalculatorRowWrapper>
         {keyRow.map(key => {
-          console.log(key);
           return (
             <Button
               key={key.value || key}
               color={key?.color}
               shadow={key?.shadow}
               text={key?.text}
+              onClick={() => calculateHandler(key.value || key)}
             >
               {key.value || key}
             </Button>

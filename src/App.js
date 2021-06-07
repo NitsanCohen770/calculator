@@ -6,12 +6,13 @@ import Input from './components/Input';
 import { CalculatorWrapper } from './styles';
 import './App.css';
 import { theme1, theme2, theme3 } from './themes';
-
+import CalcContext from './context/calc-context';
+import { useContext } from 'react';
 const themeSelector = [theme1, theme2, theme3];
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(0);
-
+  const calcCTX = useContext(CalcContext);
   return (
     <ThemeProvider theme={themeSelector[currentTheme]}>
       <CalculatorWrapper>
@@ -31,7 +32,7 @@ function App() {
             <span>3</span>
           </div>
           <ThemeRow onSelectTheme={setCurrentTheme} />
-          <Input value="123" />
+          <Input value={calcCTX.value} />
           <Calculator />
         </div>
       </CalculatorWrapper>
