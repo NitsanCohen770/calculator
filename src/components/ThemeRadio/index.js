@@ -2,12 +2,13 @@ import React from 'react';
 import { Wrapper, Item, RadioButton, RadioButtonLabel } from './styles';
 const { useState } = React;
 
-const ThemeRadio = () => {
-  const [select, setSelect] = useState('optionA');
+const ThemeRadio = ({ onSelectTheme }) => {
+  const [select, setSelect] = useState('0');
 
   const handleSelectChange = event => {
     const value = event.target.value;
     setSelect(value);
+    onSelectTheme(+event.target.value);
   };
   return (
     <Wrapper>
@@ -15,9 +16,9 @@ const ThemeRadio = () => {
         <RadioButton
           type="radio"
           name="radio"
-          value="optionA"
+          value="0"
           id="sc"
-          checked={select === 'optionA'}
+          checked={select === '0'}
           onChange={event => handleSelectChange(event)}
         ></RadioButton>
         <RadioButtonLabel />
@@ -26,8 +27,8 @@ const ThemeRadio = () => {
         <RadioButton
           type="radio"
           name="radio"
-          value="optionB"
-          checked={select === 'optionB'}
+          value="1"
+          checked={select === '1'}
           onChange={event => handleSelectChange(event)}
         />
         <RadioButtonLabel />
@@ -36,8 +37,8 @@ const ThemeRadio = () => {
         <RadioButton
           type="radio"
           name="radio"
-          value="optionC"
-          checked={select === 'optionC'}
+          value="2"
+          checked={select === '2'}
           onChange={event => handleSelectChange(event)}
         />
         <RadioButtonLabel />

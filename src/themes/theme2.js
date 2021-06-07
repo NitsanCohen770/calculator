@@ -1,30 +1,23 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-import purple from '@material-ui/core/colors/purple';
-
-const primaryGreen = green[500];
-const accentGreen = green.A200;
-const darkGreen = green[900];
-const primaryPurple = purple[500];
-const accentPurple = purple.A200;
-const darkPurple = purple[900];
-
-export const overridings = {
-  name: 'Light Theme',
-  palette: {
-    primary: {
-      light: accentGreen,
-      main: primaryGreen,
-      dark: darkGreen,
-      contrastText: '#fff',
-    },
-    secondary: {
-      light: accentPurple,
-      main: primaryPurple,
-      dark: darkPurple,
-      contrastText: '#fff',
-    },
+export const theme2 = {
+  backgrounds: {
+    main: 'hsl(0, 0%, 90%)',
+    toggle: 'hsl(0, 5%, 81%)',
+    keypad: 'hsl(0, 5%, 81%)',
+    screen: 'hsl(0, 0%, 93%)',
+  },
+  button: {
+    color: 'hsl(30, 25%, 89%)',
+    shadow: 'hsl(28, 16%, 65%)',
+    resetDelButton: 'hsl(185, 42%, 37%)',
+    resetDelButtonShadow: 'hsl(185, 58%, 25%)',
+    equalButton: 'hsl(25, 98%, 40%)',
+    equalButtonShadow: 'hsl(25, 99%, 27%)',
+  },
+  toggle: {
+    color: 'hsl(25, 98%, 40%)',
+    shadow: 'hsl(25, 99%, 27%)',
+  },
+  text: {
+    colored: 'hsl(221, 14%, 31%)',
   },
 };
-
-export default createMuiTheme(overridings);

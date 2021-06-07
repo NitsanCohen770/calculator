@@ -8,8 +8,8 @@ const Input = styled.input`
   border: none;
   outline: none;
   text-align: right;
-  color: black;
-  background: gray;
+  color: ${props => props.theme.text.white || props.theme.text.colored};
+  background: ${props => props.theme.backgrounds.screen};
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Spartan', sans-serif;

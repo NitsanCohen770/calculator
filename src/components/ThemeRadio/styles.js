@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  background: hsl(0, 0%, 93%);
+  background: ${props => props.theme.backgrounds.keypad};
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -28,7 +28,7 @@ export const RadioButtonLabel = styled.label`
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background: hsl(0, 0%, 93%);
+  background: ${props => props.theme.backgrounds.keypad};
   > div:first-child {
     display: flex;
     margin-bottom: 4px;
@@ -52,12 +52,11 @@ export const RadioButton = styled.input`
       margin: 4px;
     }
   }
-  &:checked + ${Item} {
-    background: hsl(6, 63%, 50%);
+  background: ${props => props.theme.toggle.color};
     border: hsl(6, 63%, 50%);
   }
   &:checked + ${RadioButtonLabel} {
-    background: hsl(6, 63%, 50%);
+    background:  ${props => props.theme.toggle.color};
     border: hsl(6, 63%, 50%);
     &::after {
       display: block;

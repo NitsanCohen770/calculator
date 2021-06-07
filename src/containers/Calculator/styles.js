@@ -18,6 +18,6 @@ export const CalculatorRowWrapper = styled.div`
 export const CalculatorWrapper = styled.div`
   width: fit-content;
   flex-direction: column;
-  background: hsl(0, 0%, 93%);
+  background: ${props => props.theme.backgrounds.keypad};
   border-radius: 3px;
 `;

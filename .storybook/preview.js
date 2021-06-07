@@ -1,8 +1,10 @@
-import { addDecorator, configure } from '@storybook/react';
+import { ThemeProvider } from 'styled-components';
+import { addDecorator } from '@storybook/react';
+import { withThemes } from '@react-theming/storybook-addon';
 
-import StylesDecorator from './styles-decorator';
+import { theme1, theme2, theme3 } from '../src/themes';
 
-addDecorator(StylesDecorator);
+addDecorator(withThemes(ThemeProvider, [theme1, theme2, theme3]));
 
 import '../src/index.css';
 

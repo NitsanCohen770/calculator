@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeRowWrapper } from './styles';
 import ThemeRadio from '../../components/ThemeRadio';
-const ThemeRow = () => {
+const ThemeRow = ({ onSelectTheme }) => {
   return (
     <ThemeRowWrapper>
       <div>calc</div>
@@ -16,7 +16,7 @@ const ThemeRow = () => {
         >
           THEME
         </div>
-        <ThemeRadio />
+        <ThemeRadio onSelectTheme={onSelectTheme} />
       </div>
     </ThemeRowWrapper>
   );
