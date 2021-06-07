@@ -14,6 +14,7 @@ function App() {
             justifyContent: 'space-around',
             width: '28%',
             marginLeft: 'auto',
+            fontSize: 'xx-small',
           }}
         >
           <span>1 </span>
