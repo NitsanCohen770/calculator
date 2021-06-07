@@ -14,3 +14,7 @@ For styling in used styled-components due to it's ability to pass props to the s
 ### Context
 
 I used React.Context in order to pass my styling attributes to the components and also for the calculations of the calculator.
+
+### See live here
+
+https://frontend-calculator.netlify.app/

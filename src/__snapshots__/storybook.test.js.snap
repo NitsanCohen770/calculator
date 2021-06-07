@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Calculator/Calculator Default 1`] = `
+<div
+  className="sc-iCoGMd jRQjLl"
+>
+  <div
+    className="sc-gKAaRy zGOTE"
+  >
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      7
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      8
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      9
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      DEL
+    </button>
+  </div>
+  <div
+    className="sc-gKAaRy zGOTE"
+  >
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      4
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      5
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      6
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      +
+    </button>
+  </div>
+  <div
+    className="sc-gKAaRy zGOTE"
+  >
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      1
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      2
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      3
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      -
+    </button>
+  </div>
+  <div
+    className="sc-gKAaRy zGOTE"
+  >
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      .
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      0
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      /
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      x
+    </button>
+  </div>
+  <div
+    className="sc-gKAaRy zGOTE"
+  >
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      RESET
+    </button>
+    <button
+      className="sc-bdnxRM buUoVp"
+    >
+      =
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Calculator/Input Default 1`] = `
+<input
+  className="sc-gtsrHT grtOau"
+  onClick={[Function]}
+  value="testt"
+/>
+`;
+
+exports[`Storyshots Calculator/Styled Button Default 1`] = `
+<button
+  className="sc-bdnxRM buUoVp"
+  onClick={[Function]}
+>
+  Styled Button
+</button>
+`;
+
+exports[`Storyshots Calculator/ThemeRadio Default 1`] = `
+<div
+  className="sc-dlnjwi bycHQP"
+>
+  <div
+    className="sc-hKFxyN gtpRBk"
+  >
+    <input
+      checked={true}
+      className="sc-jSFjdj dSaeJi"
+      id="sc"
+      name="radio"
+      onChange={[Function]}
+      type="radio"
+      value="optionA"
+    />
+    <label
+      className="sc-eCApnc jvxzqI"
+    />
+  </div>
+  <div
+    className="sc-hKFxyN gtpRBk"
+  >
+    <input
+      checked={false}
+      className="sc-jSFjdj dSaeJi"
+      name="radio"
+      onChange={[Function]}
+      type="radio"
+      value="optionB"
+    />
+    <label
+      className="sc-eCApnc jvxzqI"
+    />
+  </div>
+  <div
+    className="sc-hKFxyN gtpRBk"
+  >
+    <input
+      checked={false}
+      className="sc-jSFjdj dSaeJi"
+      name="radio"
+      onChange={[Function]}
+      type="radio"
+      value="optionC"
+    />
+    <label
+      className="sc-eCApnc jvxzqI"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Calculator/ThemeRow Default 1`] = `
+<div
+  className="sc-fujyAs fwNImq"
+>
+  <div>
+    calc
+  </div>
+  <div>
+    <div
+      style={
+        Object {
+          "alignSelf": "center",
+          "fontSize": "0.5rem",
+          "marginRight": "10px",
+        }
+      }
+    >
+      THEME
+    </div>
+    <div
+      className="sc-dlnjwi bycHQP"
+    >
+      <div
+        className="sc-hKFxyN gtpRBk"
+      >
+        <input
+          checked={true}
+          className="sc-jSFjdj dSaeJi"
+          id="sc"
+          name="radio"
+          onChange={[Function]}
+          type="radio"
+          value="optionA"
+        />
+        <label
+          className="sc-eCApnc jvxzqI"
+        />
+      </div>
+      <div
+        className="sc-hKFxyN gtpRBk"
+      >
+        <input
+          checked={false}
+          className="sc-jSFjdj dSaeJi"
+          name="radio"
+          onChange={[Function]}
+          type="radio"
+          value="optionB"
+        />
+        <label
+          className="sc-eCApnc jvxzqI"
+        />
+      </div>
+      <div
+        className="sc-hKFxyN gtpRBk"
+      >
+        <input
+          checked={false}
+          className="sc-jSFjdj dSaeJi"
+          name="radio"
+          onChange={[Function]}
+          type="radio"
+          value="optionC"
+        />
+        <label
+          className="sc-eCApnc jvxzqI"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

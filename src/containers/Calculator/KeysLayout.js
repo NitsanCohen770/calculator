@@ -14,7 +14,7 @@ const KeysLayout = () => {
     return (
       <CalculatorRowWrapper>
         {keyRow.map(key => {
-          return <Button>{key}</Button>;
+          return <Button key={key}>{key}</Button>;
         })}
       </CalculatorRowWrapper>
     );
