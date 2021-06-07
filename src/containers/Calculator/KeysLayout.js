@@ -38,11 +38,22 @@ const keysValue = [
 const KeysLayout = () => {
   const calcCTX = useContext(CalcContext);
   const calculateHandler = value => {
-    if (isNaN(value)) {
+    if (isNaN(value) && value !== '.') {
       switch (value) {
         case '+':
-          return calcCTX.increment(calcCTX.value);
-
+          return calcCTX.increment();
+        case '-':
+          return calcCTX.decrement();
+        case 'x':
+          return calcCTX.multiply();
+        case '/':
+          return calcCTX.divide();
+        case 'RESET':
+          return calcCTX.reset();
+        case '=':
+          return calcCTX.equals();
+        case 'DEL':
+          return calcCTX.delete();
         default:
           return calcCTX.increment(calcCTX.value);
       }

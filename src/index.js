@@ -5,11 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CalcProvider from './context/CalcProvider';
 ReactDOM.render(
-  <React.StrictMode>
-    <CalcProvider>
-      <App />
-    </CalcProvider>
-  </React.StrictMode>,
+  <CalcProvider>
+    <App />
+  </CalcProvider>,
   document.getElementById('root')
 );
 
