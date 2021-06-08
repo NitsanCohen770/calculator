@@ -32,7 +32,7 @@ function App() {
             <span>3</span>
           </div>
           <ThemeRow onSelectTheme={setCurrentTheme} />
-          <Input value={calcCTX.value} />
+          <Input readOnly value={calcCTX.value} />
           <Calculator />
         </div>
       </CalculatorWrapper>

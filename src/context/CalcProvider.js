@@ -13,9 +13,14 @@ const isOperatorInExpression = expression =>
   expression.includes('-') ||
   expression.includes('*') ||
   expression.includes('/');
+const isDecimalInExpression = expression => expression.includes('.');
+
 const calcReducer = (state, action) => {
   if (action.type === 'NUMBER') {
-    if (isOperatorInExpression(state.value)) {
+    if (
+      isOperatorInExpression(state.value) ||
+      isDecimalInExpression(state.value)
+    ) {
       console.log(state.value);
       return { value: state.value + `${action.number}` };
     }
@@ -61,6 +66,16 @@ const calcReducer = (state, action) => {
     const updatedNumber = state.value.substring(0, state.value.length - 1);
     return { ...state, value: updatedNumber };
   }
+  if (action.type === 'DECIMAL') {
+    if (
+      isDecimalInExpression(state.value) &&
+      !isOperatorInExpression(state.value)
+    ) {
+      return { ...state };
+    }
+
+    return { ...state, value: state.value + '.' };
+  }
   return defaultCalcState;
 };
 
@@ -95,6 +110,9 @@ const CalcProvider = props => {
   const deleteCalcHandler = number => {
     dispatchCalcAction({ type: 'DELETE', number });
   };
+  const decimalCalcHandler = number => {
+    dispatchCalcAction({ type: 'DECIMAL', number });
+  };
 
   const calcContext = {
     value: calcState.value,
@@ -106,6 +124,7 @@ const CalcProvider = props => {
     reset: resetCalcHandler,
     equals: equalsCalcHandler,
     delete: deleteCalcHandler,
+    decimal: decimalCalcHandler,
   };
 
   return (

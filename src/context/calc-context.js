@@ -11,6 +11,7 @@ const CalcContext = React.createContext({
   reset: () => {},
   equals: () => {},
   delete: () => {},
+  decimal: () => {},
 });
 
 export default CalcContext;

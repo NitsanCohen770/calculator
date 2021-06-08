@@ -38,7 +38,7 @@ const keysValue = [
 const KeysLayout = () => {
   const calcCTX = useContext(CalcContext);
   const calculateHandler = value => {
-    if (isNaN(value) && value !== '.') {
+    if (isNaN(value)) {
       switch (value) {
         case '+':
           return calcCTX.increment();
@@ -54,6 +54,8 @@ const KeysLayout = () => {
           return calcCTX.equals();
         case 'DEL':
           return calcCTX.delete();
+        case '.':
+          return calcCTX.decimal();
         default:
           return calcCTX.increment(calcCTX.value);
       }

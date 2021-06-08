@@ -1,13 +1,10 @@
 import React from 'react';
 
-import { action } from '@storybook/addon-actions';
-
 import StyledInput from './index';
 
 export default {
+  components: StyledInput,
   title: 'Calculator/Input',
 };
 
-export const Default = () => (
-  <StyledInput onClick={action('Styled button clicked')} value="testt" />
-);
+export const Default = () => <StyledInput value="12345+12345" />;
