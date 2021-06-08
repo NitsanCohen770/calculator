@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const StyledButton = styled.button`
   overflow: hidden;
   background: ${props =>
@@ -8,7 +9,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   color: ${props => props.text || props.theme.text.colored};
   padding: 0 30px;
-  box-shadow: 0 4px 2px -2px ${props => props.theme.button.shadow};
+  box-shadow: 0 4px 2px -2px ${props => props.theme.button[props.shadow] || props.theme.button.shadow};
   margin: 5px;
   font-size: 1em;
   text-align: center;
@@ -18,6 +19,10 @@ const StyledButton = styled.button`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  &:hover {
+    box-shadow: 0 -4px 2px -2px
+      ${props => props.theme.button[props.shadow] || props.theme.button.shadow};
+  }
 `;
 
 export default StyledButton;
