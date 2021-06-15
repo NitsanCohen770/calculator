@@ -17,6 +17,9 @@ const isDecimalInExpression = expression => expression.includes('.');
 
 const calcReducer = (state, action) => {
   if (action.type === 'NUMBER') {
+    if (state.value == 0) {
+      return { value: `${action.number}` };
+    }
     if (
       isOperatorInExpression(state.value) ||
       isDecimalInExpression(state.value)
